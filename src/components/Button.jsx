@@ -6,7 +6,7 @@ const Button = ({className, children,}) => {
         <button 
             className={classes('button', 
             className,
-             {
+            {
                 // ' button--cart': props.buttonCart,
             })}
         >
