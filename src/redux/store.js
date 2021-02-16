@@ -1,7 +1,13 @@
-import {createStore} from 'redux'
+import {createStore, compose, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk'
 
 import rotReducers from './reducers'
 
-const store = createStore(rotReducers)
+const composeEnhancers =   window.__REDUX_DEVTOOLS_EXTENSION__ || compose
+
+const store = createStore(
+    rotReducers,
+    composeEnhancers(applyMiddleware(thunk)),
+    )
 
 export default store
