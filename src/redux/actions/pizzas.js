@@ -1,10 +1,9 @@
 import axios from 'axios'
-import {  useDispatch } from "react-redux"
+
 
 
 export const fetchPizzas = () => (dispatch) => {
-    // const dispatch = useDispatch()
-    axios.get('http://localhost:3001/pizzas').then(({ data }) => {
+    axios.get('http://localhost:3005/pizzas').then(({ data }) => {
         dispatch(setPizzas(data))
     })
 }
