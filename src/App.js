@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.scss';
-import axios from 'axios'
 
 import { Header } from './components';
 import { Home, Cart } from './pages';
 import { Route } from 'react-router-dom';
-import {  useDispatch } from "react-redux"
+// import {  useDispatch } from "react-redux"
 
 const App = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   // window.test = () => {
   //   axios.get('http://localhost:3001/pizzas').then(({ data }) => {
