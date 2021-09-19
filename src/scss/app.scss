@@ -1,8 +1,8 @@
-@import 'fonts';
-@import 'variables';
-@import 'libs/normalize';
+@import "fonts";
+@import "variables";
+@import "libs/normalize";
 
-@import 'components/all';
+@import "components/all";
 
 body {
   background-color: $background;
@@ -15,6 +15,10 @@ body {
   margin: 50px auto;
   border-radius: 10px;
   max-width: 1400px;
+
+  @media (max-width: 480px) {
+    width: calc(100vw - 40px);
+  }
 }
 
 .content {
@@ -28,12 +32,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 0 -20px;
   }
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      align-items: start;
+      flex-direction: column;
+    }
   }
 }
 
@@ -55,12 +65,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
   }
 
   .content__title {
     display: flex;
     align-items: center;
     font-size: 32px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 20px;
+    }
 
     svg {
       position: relative;
@@ -113,11 +131,40 @@ body {
     padding-top: 30px;
     margin-top: 30px;
 
+    @media (max-width: 768px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+
+    &-inner {
+      display: flex;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
     &-img {
       display: flex;
       align-items: center;
       margin-right: 15px;
-      width: 10%;
+      width: 20%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      @media (max-width: 480px) {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
 
       img {
         width: 80px;
@@ -130,6 +177,15 @@ body {
       flex-direction: column;
       justify-content: center;
       width: 40%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      @media (max-width: 480px) {
+        margin-bottom: 10px;
+        text-align: center;
+      }
 
       h3 {
         font-weight: bold;
@@ -148,7 +204,16 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 13%;
+      width: 30%;
+
+      @media (max-width: 768px) {
+        width: 50%;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 480px) {
+        width: 160px;
+      }
 
       &-minus {
         svg {
@@ -167,7 +232,12 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 33%;
+      width: 60%;
+
+      @media (max-width: 768px) {
+        width: 50%;
+        margin-bottom: 30px;
+      }
 
       b {
         font-weight: bold;
@@ -180,7 +250,12 @@ body {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 4%;
+      width: 10%;
+
+      @media (max-width: 768px) {
+        width: 50%;
+        justify-content: center;
+      }
 
       .button {
         border-color: darken($color: $gray-line, $amount: 10);
@@ -216,9 +291,16 @@ body {
       display: flex;
       justify-content: space-between;
 
+      @media (max-width: 480px) {
+        flex-direction: column;
+      }
+
       span {
         font-size: 22px;
 
+        @media (max-width: 480px) {
+          margin-bottom: 10px;
+        }
         &:last-of-type {
           b {
             color: $orange;
@@ -232,6 +314,12 @@ body {
       justify-content: space-between;
       margin-top: 40px;
 
+      @media (max-width: 480px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      }
+
       .go-back-btn {
         display: flex;
         align-items: center;
@@ -239,6 +327,10 @@ body {
         width: 210px;
 
         border-color: darken($color: $gray-line, $amount: 10);
+
+        @media (max-width: 480px) {
+          margin-top: 20px;
+        }
 
         span {
           color: darken($color: $gray-line, $amount: 20);
@@ -278,6 +370,10 @@ body {
     width: 560px;
     text-align: center;
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
     h2 {
       font-size: 32px;
       margin-bottom: 10px;
@@ -299,6 +395,10 @@ body {
       display: block;
       width: 300px;
       margin: 45px auto 60px;
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
     }
 
     .button--black {

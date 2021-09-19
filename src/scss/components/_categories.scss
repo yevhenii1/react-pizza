@@ -1,8 +1,19 @@
 @import 'variables';
 
 .categories {
+
+  
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+  }
+
   ul {
     display: flex;
+
+    
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
 
     li {
       background-color: #f9f9f9;
@@ -25,6 +36,16 @@
       &.active {
         background-color: #282828;
         color: #fff;
+      }
+
+      @media (max-width: 1440px) {
+        padding: 13px 15px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 1024px) {
+        margin-bottom: 10px;
+        padding: 13px 20px;
       }
     }
   }
